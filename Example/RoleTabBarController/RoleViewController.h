@@ -10,4 +10,5 @@
 
 @interface RoleViewController : UIViewController
 
++ (instancetype)viewController:(NSString *) text;
 @end

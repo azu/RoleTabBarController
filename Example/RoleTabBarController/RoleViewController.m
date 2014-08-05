@@ -9,21 +9,21 @@
 #import "RoleViewController.h"
 
 @interface RoleViewController ()
+@property (nonatomic) NSString *  mainText;
+@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 
 @end
 
 @implementation RoleViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
++ (instancetype)viewController:(NSString *) text {
+    RoleViewController *controller = [[UIStoryboard storyboardWithName:@"RoleViewController" bundle:nil] instantiateInitialViewController];
+    controller.mainText = text;
+    return controller;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL) animated {
+    [super viewWillAppear:animated];
+    self.mainLabel.text = self.mainText;
 }
 
 @end
