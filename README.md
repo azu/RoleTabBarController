@@ -7,8 +7,9 @@
 
 RoleTabBarController provide Implementing UITabBarController pattern.
 
-* similar to `<UITableViewDataSource>`.
+* Similar to `<UITableViewDataSource>` patterns.
 
+`RoleTabBarController` is not special, but it's just another pattern.
 
 ## Installation
 
@@ -52,7 +53,9 @@ You should implement `<RoleTabBarDataSource>` protocol on subclass of `RoleTabBa
 
 #### Subclass of RoleTabBarController
 
-You create Subclass of `RoleTabBarController` and adopt `<RoleTabBarDataSource>` protocol on the subclass(AppTabBarController) 
+1. You create Subclass of `RoleTabBarController` and adopt `<RoleTabBarDataSource>` protocol on the subclass(AppTabBarController) 
+2. You should implement `<RoleTabBarDataSource>` protocol
+3. That's all
 
 ``` objc
 @interface AppTabBarController : RoleTabBarController <RoleTabBarDataSource>
@@ -90,7 +93,6 @@ You create Subclass of `RoleTabBarController` and adopt `<RoleTabBarDataSource>`
 }
 @end
 ```
-
 
 
 ## Contributing
