@@ -5,24 +5,102 @@
 [![License](https://img.shields.io/cocoapods/l/RoleTabBarController.svg?style=flat)](http://cocoadocs.org/docsets/RoleTabBarController)
 [![Platform](https://img.shields.io/cocoapods/p/RoleTabBarController.svg?style=flat)](http://cocoadocs.org/docsets/RoleTabBarController)
 
-## Usage
+RoleTabBarController provide Implementing UITabBarController pattern.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+* similar to `<UITableViewDataSource>`.
 
-## Requirements
 
 ## Installation
 
-RoleTabBarController is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+```
+pod 'RoleTabBarController'
+```
 
-    pod "RoleTabBarController"
+## Usage
 
-## Author
+See `Example/` or 
 
-azu, azuciao@gmail.com
+```
+pod try RoleTabBarController
+```
+
+### RoleTabBarDataSource
+
+You should implement `<RoleTabBarDataSource>` protocol on subclass of `RoleTabBarController`
+
+``` objectivec
+@protocol RoleTabBarDataSource <NSObject>
+/**
+* Life Cycle
+*
+* numberOfRoleTabBarController
+* -> ViewController - viewControllerAtIndex
+* -> TabBarItem - tabBarItemObjectAtIndex
+* -> TabBarItem - willShowTabBar
+*/
+- (NSUInteger)numberOfRoleTabBarController:(RoleTabBarController *) tabBarController;
+
+- (UIViewController *)roleTabBarController:(RoleTabBarController *) tabBarController viewControllerAtIndex:(NSUInteger) index;
+
+- (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController tabBarItemObjectAtIndex:(NSUInteger) index;
+
+@optional
+- (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController willShowTabBar:(UITabBarItem *) tabBarItem atIndex:(NSUInteger) index;
+
+@end
+```
+
+#### Subclass of RoleTabBarController
+
+You create Subclass of `RoleTabBarController` and adopt `<RoleTabBarDataSource>` protocol on the subclass(AppTabBarController) 
+
+``` objc
+@interface AppTabBarController : RoleTabBarController <RoleTabBarDataSource>
+@end
+
+@interface AppTabBarController ()
+@property(nonatomic, strong) AppTabBarControllerModel *model;
+@end
+
+@implementation AppTabBarController
+- (AppTabBarControllerModel *)model {
+    if (_model == nil) {
+        _model = [[AppTabBarControllerModel alloc] init];
+    }
+    return _model;
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.dataSource = self;
+}
+
+
+#pragma mark - RoleTabBarController
+
+- (NSUInteger)numberOfRoleTabBarController:(RoleTabBarController *) tabBarController {
+    return 4;
+}
+
+- (UIViewController *)roleTabBarController:(RoleTabBarController *) tabBarController viewControllerAtIndex:(NSUInteger) index {
+    return [self.model viewControllerAtType:(AppTabBarControllerType)index];
+}
+
+- (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController tabBarItemObjectAtIndex:(NSUInteger) index {
+    return [self.model tabBarItemObjectAtIndex:index];
+}
+@end
+```
+
+
+
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
 ## License
 
-RoleTabBarController is available under the MIT license. See the LICENSE file for more info.
-
+MIT
