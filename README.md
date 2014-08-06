@@ -17,7 +17,7 @@ RoleTabBarController provide Implementing UITabBarController pattern.
 pod 'RoleTabBarController'
 ```
 
-## Usage
+## Example
 
 See `Example/` or 
 
