@@ -51,7 +51,7 @@ You should implement `<RoleTabBarDataSource>` protocol on subclass of `RoleTabBa
 @end
 ```
 
-#### How to use
+## How to use
 
 1. You create Subclass of `RoleTabBarController` and adopt `<RoleTabBarDataSource>` protocol on the subclass(AppTabBarController) 
 2. You should implement `<RoleTabBarDataSource>` protocol
