@@ -46,12 +46,12 @@ You should implement `<RoleTabBarDataSource>` protocol on subclass of `RoleTabBa
 - (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController tabBarItemObjectAtIndex:(NSUInteger) index;
 
 @optional
-- (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController willShowTabBar:(UITabBarItem *) tabBarItem atIndex:(NSUInteger) index;
+- (void)roleTabBarController:(RoleTabBarController *) tabBarController willShowTabBar:(UITabBarItem *) tabBarItem atIndex:(NSUInteger) index;
 
 @end
 ```
 
-#### Subclass of RoleTabBarController
+#### How to use
 
 1. You create Subclass of `RoleTabBarController` and adopt `<RoleTabBarDataSource>` protocol on the subclass(AppTabBarController) 
 2. You should implement `<RoleTabBarDataSource>` protocol
