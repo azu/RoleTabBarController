@@ -45,7 +45,11 @@
             if (![tabBarItem respondsToSelector:@selector(selectedImage)]) {
                 [tabBarItem setFinishedSelectedImage:itemObject.selectedImage withFinishedUnselectedImage:itemObject.unselectedImage];
             } else {
-                [tabBarItem setSelectedImage:itemObject.selectedImage];
+                if ([itemObject.unselectedImage respondsToSelector:@selector(imageWithRenderingMode:)]) {
+                    tabBarItem.selectedImage = [itemObject.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+                } else {
+                    tabBarItem.selectedImage = itemObject.selectedImage;
+                }
             }
         }
     }];
