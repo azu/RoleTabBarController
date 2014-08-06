@@ -23,6 +23,6 @@
 - (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController tabBarItemObjectAtIndex:(NSUInteger) index;
 
 @optional
-- (RoleTabBarItemObject *)roleTabBarController:(RoleTabBarController *) tabBarController willShowTabBar:(UITabBarItem *) tabBarItem atIndex:(NSUInteger) index;
+- (void)roleTabBarController:(RoleTabBarController *) tabBarController willShowTabBar:(UITabBarItem *) tabBarItem atIndex:(NSUInteger) index;
 
 @end
