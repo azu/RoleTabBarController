@@ -10,4 +10,6 @@
 
 @interface RoleTabBarController : UITabBarController
 @property (nonatomic) id<RoleTabBarDataSource>dataSource;
+
+- (void)reloadData;
 @end

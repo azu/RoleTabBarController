@@ -6,6 +6,7 @@
 #import "AppTabBarController.h"
 #import "AppTabBarControllerModel.h"
 #import "RoleTabBarItemObject.h"
+#import "RoleTabBarController.h"
 
 
 @interface AppTabBarController ()
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = self;
+    [self reloadData];
 }
 
 

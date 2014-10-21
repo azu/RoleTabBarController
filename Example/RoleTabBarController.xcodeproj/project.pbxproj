@@ -43,8 +43,8 @@
 		17B5C54062C3759179630BEA /* AppTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTabBarController.m; sourceTree = "<group>"; };
 		17B5C9B85AF458575514F001 /* AppTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTabBarController.h; sourceTree = "<group>"; };
 		17B5CA40F6762BE7D8876FAA /* AppTabBarControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTabBarControllerModel.m; sourceTree = "<group>"; };
-		284C6178D5DD49E0BB4F168D /* Pods-RoleTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoleTabBarController.xcconfig"; path = "Pods/Pods-RoleTabBarController.xcconfig"; sourceTree = "<group>"; };
 		458D180D528C332B1EB0ABD8 /* RoleTabBarController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RoleTabBarController.podspec; path = ../RoleTabBarController.podspec; sourceTree = "<group>"; };
+		4FA585C6615E8103A4843B0A /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* RoleTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoleTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,9 +65,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		62E32A0CD4C5B04444F604A9 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6ECD7DFA01434E54B6228F3F /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		739A2C0B1990D7EB00A8B2A8 /* RoleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RoleViewController.storyboard; sourceTree = "<group>"; };
-		AAD4012D5D614422B835036D /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
+		AB2280D79928E14740988FAB /* Pods-RoleTabBarController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoleTabBarController.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoleTabBarController/Pods-RoleTabBarController.release.xcconfig"; sourceTree = "<group>"; };
+		BE792FCD64D9592CF922E86D /* Pods-RoleTabBarController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoleTabBarController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoleTabBarController/Pods-RoleTabBarController.debug.xcconfig"; sourceTree = "<group>"; };
 		C503D024D5DB4464B943F3B6 /* libPods-RoleTabBarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoleTabBarController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD60DFA8538AAD79CC0860D1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF8C641528BCEACF7504865E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -99,6 +101,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2B68EE036A59156DBF7DD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE792FCD64D9592CF922E86D /* Pods-RoleTabBarController.debug.xcconfig */,
+				AB2280D79928E14740988FAB /* Pods-RoleTabBarController.release.xcconfig */,
+				62E32A0CD4C5B04444F604A9 /* Pods-Tests.debug.xcconfig */,
+				4FA585C6615E8103A4843B0A /* Pods-Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		17B5C96F1D485A7DCBE02E87 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +131,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				284C6178D5DD49E0BB4F168D /* Pods-RoleTabBarController.xcconfig */,
-				AAD4012D5D614422B835036D /* Pods-Tests.xcconfig */,
+				0D2B68EE036A59156DBF7DD5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,7 +324,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-RoleTabBarController-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoleTabBarController/Pods-RoleTabBarController-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A02700B6D2044305B1B84B39 /* Check Pods Manifest.lock */ = {
@@ -342,7 +354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F28886D473A54E47BFE72F69 /* Check Pods Manifest.lock */ = {
@@ -495,7 +507,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 284C6178D5DD49E0BB4F168D /* Pods-RoleTabBarController.xcconfig */;
+			baseConfigurationReference = BE792FCD64D9592CF922E86D /* Pods-RoleTabBarController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -509,7 +521,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 284C6178D5DD49E0BB4F168D /* Pods-RoleTabBarController.xcconfig */;
+			baseConfigurationReference = AB2280D79928E14740988FAB /* Pods-RoleTabBarController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -523,7 +535,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAD4012D5D614422B835036D /* Pods-Tests.xcconfig */;
+			baseConfigurationReference = 62E32A0CD4C5B04444F604A9 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoleTabBarController.app/RoleTabBarController";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -546,7 +558,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAD4012D5D614422B835036D /* Pods-Tests.xcconfig */;
+			baseConfigurationReference = 4FA585C6615E8103A4843B0A /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoleTabBarController.app/RoleTabBarController";
 				FRAMEWORK_SEARCH_PATHS = (

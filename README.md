@@ -75,6 +75,7 @@ You should implement `<RoleTabBarDataSource>` protocol on subclass of `RoleTabBa
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = self;
+    [self reloadData];
 }
 
 

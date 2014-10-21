@@ -12,13 +12,21 @@
 
 }
 
-- (void)viewWillAppear:(BOOL) animated {
-    [super viewWillAppear:animated];
-    NSAssert([self.dataSource respondsToSelector:@
-        selector(numberOfRoleTabBarController:)], @"must implememnt `numberOfRoleTabBarController:`");
+- (void)reloadData {
     [self setupViewControllers];
     [self setupTabItems];
     [self updateTabItems];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self reloadData];
+}
+
+- (void)viewDidAppear:(BOOL) animated {
+    [super viewDidAppear:animated];
+    NSAssert([self.dataSource respondsToSelector:@
+        selector(numberOfRoleTabBarController:)], @"must implememnt `numberOfRoleTabBarController:`");
 }
 
 - (void)updateTabItems {
