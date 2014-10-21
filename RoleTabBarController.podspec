@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "RoleTabBarController"
-  s.version          = "0.1.1"
+  s.version          = "1.0.0"
   s.summary          = "UITabBarController patterns library - similar to <UITableViewDataSource> patterns."
   s.homepage         = "https://github.com/azu/RoleTabBarController"
   s.license          = 'MIT'
